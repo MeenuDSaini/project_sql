@@ -1,0 +1,32 @@
+id,description,state.name,school,school_id,country.name,city.name
+16013,Online,Online,springboard,11035,Online,Online
+16378,Online,Online,dataquest,10683,Online,Online
+18261,Online,Online,syntax-technologies,11797,Online,Online
+15901,"Berlin, Germany",Germany,ironhack,10828,Germany,Berlin
+16022,"Mexico City, Mexico",Mexico,ironhack,10828,Mexico,Mexico City
+16086,"Amsterdam, Netherlands",Netherlands,ironhack,10828,Netherlands,Amsterdam
+16088,"Sao Paulo, Brazil",Brazil,ironhack,10828,Brazil,Sao Paulo
+16109,"Paris, France",France,ironhack,10828,France,Paris
+16375,"Miami, FL, United States",Florida,ironhack,10828,United States,Miami
+16376,"Madrid, Spain",Spain,ironhack,10828,Spain,Madrid
+16377,"Barcelona, Spain",Spain,ironhack,10828,Spain,Barcelona
+16709,"Lisbon, Portugal",Portugal,ironhack,10828,Portugal,Lisbon
+17233,Online,Online,ironhack,10828,Online,Online
+17154,Online,Online,tripleten,11225,Online,Online
+18073,Online,Online,colaberry,11718,Online,Online
+18116,Online,Online,maven-analytics,11740,Online,Online
+15807,Online,Online,udacity,11118,Online,Online
+15935,"New York City, NY",New York,brainstation,10571,United States,NYC
+15985,"Toronto, Canada",Ontario,brainstation,10571,Canada,Toronto
+16010,"Vancouver, Canada",British Columbia,brainstation,10571,Canada,Vancouver
+16909,"Boston, MA",Massachusetts,brainstation,10571,United States,Boston
+16910,"Chicago, IL",Illinois,brainstation,10571,United States,Chicago
+16940,Online,Online,brainstation,10571,Online,Online
+17706,"Miami, FL",Florida,brainstation,10571,United States,Miami
+17731,"London, UK",United Kingdom,brainstation,10571,United Kingdom,London
+18109,Online,Online,ccs-learning-academy,11736,Online,Online
+16383,Online,Online,thinkful,11098,Online,Online
+16360,"New York City, NY",New York,general-assembly,10761,United States,NYC
+16372,Online,Online,general-assembly,10761,Online,Online
+16961,"London, UK",United Kingdom,general-assembly,10761,United Kingdom,London
+17033,"Toronto, Canada",Ontario,general-assembly,10761,Canada,Toronto
