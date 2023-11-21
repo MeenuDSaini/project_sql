@@ -1,4 +1,5 @@
 CREATE DATABASE SQL_PROJECT;
+USE SQL_PROJECT;
 
 -- Schools Table
 CREATE TABLE Schools (
@@ -23,7 +24,7 @@ CREATE TABLE Locations (
 
 -- Courses Table
 CREATE TABLE Courses (
-    school_id INT PRIMARY KEY,
+    school_id INT ,
     school VARCHAR(50),
     courses TEXT,
     FOREIGN KEY (school_id) REFERENCES Schools(school_id)
@@ -32,13 +33,20 @@ CREATE TABLE Courses (
 -- Comments Table
 CREATE TABLE Comments (
     comment_id INT PRIMARY KEY,
+    name_person VARCHAR(50),
+    host_program VARCHAR(50),
+    Alumni boolean,
+    JobTitle VARCHAR(50),
+    school_id INT,
     school VARCHAR(50),
     graduatingYear INT,
-    comments TEXT,
-    overall INT,
-    curriculum INT,
-    jobsupport INT,
-    review_body TEXT
+    createdAt DATE,
+    Tagline TEXT,
+    overall_score FLOAT,
+    curriculum FLOAT,
+    jobsupport FLOAT,
+    review_body TEXT,
+    FOREIGN KEY (school_id) REFERENCES Schools(school_id)
 );
 select * from schools;
 select * from Locations;
