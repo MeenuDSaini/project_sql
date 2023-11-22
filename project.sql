@@ -2,7 +2,7 @@ CREATE DATABASE SQL_PROJECT;
 USE SQL_PROJECT;
 
 -- Schools Table
-CREATE TABLE Schools (
+CREATE TABLE schools (
     school_id INT PRIMARY KEY,
     school VARCHAR(50),
     website VARCHAR(50),
@@ -19,7 +19,7 @@ CREATE TABLE Locations (
     country_id INT,
     country_name VARCHAR(50),
     city_name VARCHAR(50),
-    FOREIGN KEY (school_id) REFERENCES Schools(school_id)
+    FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
 
 -- Courses Table
@@ -27,12 +27,12 @@ CREATE TABLE Courses (
     school_id INT ,
     school VARCHAR(50),
     courses TEXT,
-    FOREIGN KEY (school_id) REFERENCES Schools(school_id)
+    FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
 
 -- Comments Table
 CREATE TABLE Comments (
-    comment_id INT PRIMARY KEY,
+    id INT PRIMARY KEY,
     name_person VARCHAR(50),
     host_program VARCHAR(50),
     Alumni boolean,
@@ -46,7 +46,14 @@ CREATE TABLE Comments (
     curriculum FLOAT,
     jobsupport FLOAT,
     review_body TEXT,
-    FOREIGN KEY (school_id) REFERENCES Schools(school_id)
+    FOREIGN KEY (school_id) REFERENCES schools(school_id)
+);
+CREATE TABLE Course_price (
+    school_id INT ,
+    school VARCHAR(50),
+    courses TEXT,
+    price INT,
+    FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
 select * from schools;
 select * from Locations;
