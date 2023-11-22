@@ -175,3 +175,90 @@ from course_prices
 where school = 'udacity' and  price is not null and price<7500
 order by price asc;
 
+/* question: list of schools providing data analytics courses.*/ /* Answer: # school, course, price
+syntax-technologies, Data Analytics & Business Intelligence Course, Not found
+springboard, Data Analytics Career Track, 8500
+ironhack, Data Analytics Part-Time, 8000
+thinkful, Data Analytics Flex, 8000
+ccs-learning-academy, Data Analytics & Business Intelligence Bootcamp, 7995
+tripleten, Data Analytics, 7900
+ironhack, Data Analytics Bootcamp, 7500
+general-assembly, Data Analytics (Short Course), 4500
+springboard, Introduction to Data Analytics, 349
+brainstation, Data Analytics Course, 3250
+colaberry, Data Analytics, 1999
+thinkful, Data Analytics Immersion, 12250
+*/
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course like '%data analytics%'
+order by price desc;
+
+/* Question: list of schools who are providing data analytics courses in less prices than Ironhack.*//* answer: syntax-technologies	Data Analytics & Business Intelligence Course	Not found
+general-assembly	Data Analytics (Short Course)	4500
+springboard	Introduction to Data Analytics	349
+brainstation	Data Analytics Course	3250
+colaberry	Data Analytics	1999*/
+
+SELECT school,course,price
+FROM course_prices
+WHERE course like '%data analytics%' and price IS NOT NULL AND price<7500
+order by price desc;
+
+/* Question: list of schools who are providing data science courses.*//* Answer: # school, course, price
+springboard, Data Science Career Track, 9900
+tripleten, Data Science, 9700
+thinkful, Data Science Flex, 9500
+springboard, Data Science Career Track Prep, 490
+brainstation, Data Science Course, 3250
+brainstation, Data Science Bootcamp, 16500
+general-assembly, Data Science Bootcamp (Full-Time), 16450
+colaberry, Data Science, 1500   - 4000
+ccs-learning-academy, Data Science & Data Engineering Bootcamp, 11995
+*/
+
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course like '%data science%'
+order by price desc;
+
+/* Question: list of schools who are providing data science courses in less prices than Ironhack.*//* Answer: # school, course, price
+springboard, Data Science Career Track Prep, 490
+brainstation, Data Science Course, 3250
+colaberry, Data Science, 1500   - 4000
+*/
+SELECT school,course,price
+FROM course_prices
+WHERE course like '%data science%' and price IS NOT NULL AND price<7500
+order by price desc;
+
+/* Question: list of courses offered by brainstation in less price than IronHack*//* Answer: # course, school, price
+Artificial Intelligence Course, brainstation, 3250
+Cybersecurity Course, brainstation, 3250
+Data Analytics Course, brainstation, 3250
+Data Science Course, brainstation, 3250
+Design Leadership Course, brainstation, 3950
+Digital Marketing Course, brainstation, 3250
+Marketing Leadership Course, brainstation, 3950
+Product Leadership Course, brainstation, 3950
+*/
+select course, school, price
+from course_prices
+where school = 'brainstation' and  price is not null and price<7500;
+
+/* Question: list of courses offered by brainstation.*//* Answer:# course, price
+Artificial Intelligence Course, 3250
+Cybersecurity Bootcamp, 16500
+Cybersecurity Course, 3250
+Data Analytics Course, 3250
+Data Science Bootcamp, 16500
+Data Science Course, 3250
+Design Leadership Course, 3950
+Digital Marketing Course, 3250
+Marketing Leadership Course, 3950
+Product Leadership Course, 3950
+ */
+SELECT course,price
+FROM course_prices
+WHERE price IS NOT NULL AND school = 'brainstation'
+order by course, price;
