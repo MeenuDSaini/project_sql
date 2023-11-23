@@ -383,3 +383,104 @@ WHERE
     price IS NOT NULL
         AND school = 'brainstation'
 ORDER BY courses , price;
+
+/* Question: prices of part-time courses of Ironhack*//* Answer: # school, course, price
+ironhack, Web Development Part-Time, 13000
+ironhack, UX/UI Design Part-Time, 13000
+ironhack, Cybersecurity Part-Time, 7500
+ironhack, Data Analytics Part-Time, 8000
+*/
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course like '%Part-Time%' AND school like 'Ironhack'
+ORDER BY school, price;
+
+/* Question: prices full-time courses of Ironhack*//*Answer: # school, course, price
+ironhack, Web Development Bootcamp, 12000
+ironhack, UX/UI Design Bootcamp, 12000
+ironhack, Cyber Security Bootcamp, 7500
+ironhack, Data Analytics Bootcamp, 7500
+*/
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course not like '%Part-Time%' AND school like 'Ironhack'
+ORDER BY school, price;
+
+/* Question: prices of part-time courses of all schools other than Ironhack*//* Answer: maven-analytics	Data Analyst Bootcamp (Part-Time)	7499*/
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course like '%Part-Time%' AND school not like 'Ironhack'
+ORDER BY school, price;
+
+/* Question: prices full-time and short courses of all schools other than Ironhack*//* Answer: # school, course, price
+brainstation, Data Science Bootcamp, 16500
+brainstation, Cybersecurity Bootcamp, 16500
+brainstation, Artificial Intelligence Course, 3250
+brainstation, Digital Marketing Course, 3250
+brainstation, Data Science Course, 3250
+brainstation, Data Analytics Course, 3250
+brainstation, Cybersecurity Course, 3250
+brainstation, Product Leadership Course, 3950
+brainstation, Marketing Leadership Course, 3950
+brainstation, Design Leadership Course, 3950
+ccs-learning-academy, Data Science & Data Engineering Bootcamp, 11995
+ccs-learning-academy, Cybersecurity Bootcamp, 12995
+ccs-learning-academy, Data Analytics & Business Intelligence Bootcamp, 7995
+ccs-learning-academy, Full-Stack Developer Bootcamp, 8995
+colaberry, Data Science, 1500   - 4000
+colaberry, Data Analytics, 1999
+dataquest, Python for Data Analysis, 29
+dataquest, R for Data Analysis, 29
+general-assembly, Software Engineering Bootcamp (Full-Time), 16450
+general-assembly, User Experience Design Bootcamp (Full-Time), 16450
+general-assembly, Data Science Bootcamp (Full-Time), 16450
+general-assembly, Visual Design (Short Course), 3500
+general-assembly, JavaScript Development (Short Course), 3950
+general-assembly, Digital Marketing (Short Course), 4500
+general-assembly, Data Analytics (Short Course), 4500
+general-assembly, User Experience Design (Short Course), 4500
+general-assembly, Front-End Web Development (Short Course), 4500
+general-assembly, Product Management (Short Course), 4500
+springboard, Introduction to Design, 349
+springboard, Introduction to Data Analytics, 349
+springboard, Data Science Career Track Prep, 490
+springboard, Tech Sales Career Track, 5900
+springboard, Data Analytics Career Track, 8500
+springboard, Cyber Security Career Track, 9900
+springboard, Data Science Career Track, 9900
+springboard, Software Engineering Foundations to Core, 9900
+springboard, Software Engineering Career Track, 9900
+springboard, Front-End Web Development, Not found
+syntax-technologies, Cyber Security Course, Not found
+syntax-technologies, Data Analytics & Business Intelligence Course, Not found
+syntax-technologies, SDET Automation Testing Course, Not found
+thinkful, UX/UI Design Immersion, 12150
+thinkful, Data Analytics Immersion, 12250
+thinkful, Engineering Immersion, 16000
+thinkful, Digital Marketing Flex, 4900
+thinkful, Technical Project Management Flex, 6500
+thinkful, Data Analytics Flex, 8000
+thinkful, Engineering Flex Program, 9500
+thinkful, UX/UI Flex, 9500
+thinkful, Data Science Flex, 9500
+tripleten, Quality Assurance Engineering, 4900
+tripleten, Business Intelligence Analytics, 6900
+tripleten, Data Analytics, 7900
+tripleten, Data Science, 9700
+tripleten, Software Engineering, 9700
+udacity, Business Analytics, 1077
+udacity, Artificial Intelligence, 1077
+udacity, AI Programming with Python, 1077
+udacity, Android Basics, 1077
+udacity, Blockchain Developer, 1436
+udacity, Cloud Dev Ops Engineer, 1436
+udacity, C++, 1436
+udacity, Android Developer, 2154
+udacity, Artificial Intelligence for Trading, 2154
+udacity, Al Product Manager, 718
+*/
+SELECT school,course,price
+FROM course_prices
+WHERE price IS NOT NULL AND course not like '%Part-Time%' AND school not like 'Ironhack'
+ORDER BY school, price;
+
