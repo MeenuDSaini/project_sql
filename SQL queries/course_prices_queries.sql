@@ -92,7 +92,7 @@ FROM
 WHERE
     price IS NOT NULL
 GROUP BY school , courses
-ORDER BY course , average_price;
+ORDER BY courses, average_price;
 
 
 /* Question: what is Average price for all courses for school?

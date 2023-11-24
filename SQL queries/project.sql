@@ -75,6 +75,6 @@ CREATE TABLE badges (
 select * from schools;
 select * from locations;
 select * from courses;
-select * from comments;
+select * from comments_trial;
 select * from course_price;
 select * from badges;
