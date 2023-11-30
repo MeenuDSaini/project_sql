@@ -14,7 +14,6 @@ CREATE TABLE schools (
 CREATE TABLE Locations (
     location_id INT PRIMARY KEY,
     school_id INT,
-    school VARCHAR(100),
     description_loc TEXT,
     state_name VARCHAR(100),
     country_name VARCHAR(100),
@@ -25,7 +24,6 @@ CREATE TABLE Locations (
 -- Courses Table
 CREATE TABLE Courses (
     school_id INT ,
-    school VARCHAR(100),
     courses TEXT,
     FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
@@ -46,7 +44,7 @@ CREATE TABLE Comments (
     FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
 
-CREATE TABLE Comments_trial (
+CREATE TABLE Comments_numerical (
     id INT PRIMARY KEY,
     graduatingYear INT,
     overall_score FLOAT,
@@ -58,7 +56,6 @@ CREATE TABLE Comments_trial (
 
 CREATE TABLE Course_price (
     school_id INT,
-    school VARCHAR(100),
     courses TEXT,
     price FLOAT,
     FOREIGN KEY (school_id) REFERENCES schools(school_id)
@@ -67,9 +64,8 @@ CREATE TABLE Course_price (
 CREATE TABLE badges (
     badges_name VARCHAR(100),
     description_badge TEXT,
-    school VARCHAR(100),
     school_id INT,
-    FOREIGN KEY (school_id) REFERENCES schools(school_id)badges
+    FOREIGN KEY (school_id) REFERENCES schools(school_id)
 );
 
 select * from schools;
