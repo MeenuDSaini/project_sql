@@ -1,7 +1,7 @@
 SELECT 
     *
 FROM
-    sql_project.badges;
+    badges_table;
 
 /* QUESTION 1:which badges are available? */ /* Answer: 
 1) fives badges are available: 
