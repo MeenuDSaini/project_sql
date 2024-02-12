@@ -1,7 +1,4 @@
-SELECT 
-    *
-FROM
-    sql_project.locations;
+SELECT * FROM sql_project.locations_table;
     
 
 /* question: In which country schools are providing online courses?*//* Answer: no data is available*/
@@ -236,3 +233,4 @@ WHERE
         AND locations.country_name IS NOT NULL
         AND locations.school = 'Ironhack'
 GROUP BY school_name , course_name , country_name;
+
